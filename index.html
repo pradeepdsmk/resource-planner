@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resource Planning</title>
+
+    <script>
+        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+            ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="app.css" />
+</head>
+
+<body>
+    <h1>Resource Planning</h1>
+    <div id=dashboard>
+        <div id="inventory" class="box">
+            <div class="box-title">
+                <h2>Inventory</h2>
+            </div>
+
+            <table id="inventory-list">
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>Name</td>
+                        <td>Qty</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Copper</td>
+                        <td>21</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="orders" class="box">
+            <div class="box-title">
+                <h2>Orders</h2>
+                <div class="box-title-buttons">
+                    <button id="new-order-button">+</button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div id="new-order-container" class="box">
+                    <div class="box-title">
+                        <h3>#12 <span class="custom-text">New Order</span></h3>
+                        <div class="box-title-buttons">
+                            <button class="form-submit" id="new-order-form-done-button">&odot;</button>
+                            <button class="form-close" id="new-order-form-close-button">&times;</button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+
+                        <div class="form">
+                            <div class="form-group">
+                                <label>Item</label>
+                                <input type="text" id="new-order-item" class="form-control" name="item-name" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Quantity</label>
+                                <input type="number" id="new-order-quantity" class="form-control"
+                                    name="item-quantity" />
+                            </div>
+                            <div class="form-group form-button-group">
+                                <button id="new-order-form-add-button">Add</button>
+                                <button id="new-order-form-update-button">Update</button>
+                                <button id="new-order-form-delete-button">Delete</button>
+                                <button id="new-order-form-cancel-button">Cancel</button>
+                            </div>
+                        </div>
+
+                        <table id="new-order-items-table">
+                            <thead>
+                                <tr>
+                                    <td>#</td>
+                                    <td>Name</td>
+                                    <td>Qty</td>
+                                </tr>
+                            </thead>
+                            <tbody id="new-order-items-list">
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="procurements" class="box">
+            <div class="box-title">
+                <h2>Procurements</h2>
+                <div class="box-title-buttons">
+                    <button id="new-procurement-button">+</button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div id="new-procurement-form" class="box">
+                    <div class="box-title">
+                        <h3>Add</h3>
+                        <div class="box-title-buttons">
+                            <button class="form-close">&times;</button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="form">
+                            <div class="form-group">
+                                <label>Item</label>
+                                <input type="text" class="form-control" name="item-name" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Quantity</label>
+                                <input type="number" name="item-quantity" />
+                            </div>
+                            <div class="form-group">
+                                <button id="new-procurement-form-submit">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+

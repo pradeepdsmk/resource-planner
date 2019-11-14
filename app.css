@@ -1,0 +1,24 @@
+#dashboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+#dashboard > .box {
+    flex: 1;
+}
+
+#inventory {
+    background-color: red;
+    background-color: #dfdfdf;
+}
+
+#orders {
+    background-color: green;
+    background-color: #ececec;
+}
+
+#procurements {
+    background-color: blue;
+    background-color: #dfdfdf;
+}
+
